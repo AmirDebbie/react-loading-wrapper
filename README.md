@@ -24,7 +24,16 @@ const App = () => {
 
   return (
     <Loading 
-    loading={loading}>
+      loading={loading}
+      // Optional Props
+      color='orange'
+      backgroundColor='blue'
+      fullPage
+      size={100}
+      speed='fast'
+      // Use Your Own Component For Loading Screen
+      loadingComponent={<MyLoadingComponent />}
+    >
       <h1>Hello World</h1>
     </Loading>
   )
@@ -33,13 +42,36 @@ const App = () => {
 export default App
 ```
 
+## Required
+---
+loading:\
+type: state\
+usage: this state will control the loading component if the state is null or false the loading will render else the children will render. 
+
 
 ## Options
 ---
-loadingComponent: JSX 
+**loadingComponent:**
+- type: JSX 
+- default: spinner
 
-color: String
+**color:**
+- type: String
+- default: blue
 
+**backgroundColor:**
+- type: String
+- default: transparent
+- options: blue, pink, yellow, orange, red, black
+ (all linear gradient)
+
+**size:**
+- type: Number
+- default: 120px
+
+**speed:**
+- type: String
+- options: slow, fast, extreme
 
 ## License
 
