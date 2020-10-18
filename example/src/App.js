@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import { ExampleComponent } from 'react-loading-wrapper'
+import { Loading } from 'react-loading-wrapper'
 import 'react-loading-wrapper/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const [loading, setLoading] = useState(true)
+
+  return (
+    <Loading loading={loading}>
+      <h1>Hello World</h1>
+    </Loading>
+  )
 }
 
 export default App

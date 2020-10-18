@@ -1,6 +1,6 @@
 # react-loading-wrapper
 
-> Loading component to wrap arround content that waits for a loading state.
+> Loading component to wrap around content that waits for a loading state.
 
 [![NPM](https://img.shields.io/npm/v/react-loading-wrapper.svg)](https://www.npmjs.com/package/react-loading-wrapper) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -10,21 +10,37 @@
 npm install --save react-loading-wrapper
 ```
 
-## Usage
+## Usage 
+---
 
 ```jsx
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-import MyComponent from 'react-loading-wrapper'
+import { Loading } from 'react-loading-wrapper'
 import 'react-loading-wrapper/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  const [loading, setLoading] = useState(true)
+
+  return (
+    <Loading 
+    loading={loading}>
+      <h1>Hello World</h1>
+    </Loading>
+  )
 }
+
+export default App
 ```
+
+
+## Options
+---
+loadingComponent: JSX 
+
+color: String
+
 
 ## License
 
-MIT © [AmirDebbie and ShaharEli](https://github.com/AmirDebbie and ShaharEli)
+MIT © [AmirDebbie](https://github.com/AmirDebbie), [ShaharEli](https://github.com/ShaharEli)
