@@ -25,14 +25,13 @@ const App = () => {
   return (
     <Loading 
       loading={loading}
-      // Optional Props
+      // Optional props
       color='orange'
       backgroundColor='blue'
       fullPage
       size={100}
       speed='fast'
-      // Use Your Own Component For Loading Screen
-      loadingComponent={<MyLoadingComponent />}
+      loadingComponent={<MyLoadingComponent />} // Use your own component for the loading screen is you want
     >
       <h1>Hello World</h1>
     </Loading>
