@@ -1,6 +1,6 @@
 # react-loading-wrapper
 
-> Loading component to wrap around content that waits for a loading state.
+> Loading component to wrap around content that waits for a loading state. 
 
 [![NPM](https://img.shields.io/npm/v/react-loading-wrapper.svg)](https://www.npmjs.com/package/react-loading-wrapper) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -43,9 +43,9 @@ export default App
 
 ## Required
 ---
-loading:\
-type: state\
-usage: this state will control the loading component if the state is null or false the loading will render else the children will render. 
+**loading:**
+- type: state
+- usage: this state will control the loading component if the state is null or false the loading will render else the children will render. 
 
 
 ## Options
