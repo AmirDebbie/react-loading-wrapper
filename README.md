@@ -44,33 +44,42 @@ export default App
 ## Required
 ---
 **loading:**
-- type: state
-- usage: this state will control the loading component if the state is null or false the loading will render else the children will render. 
-
+- Usage: this state will control the loading component if the state is null or false the loading will render else the children will render. 
+- Type: Bool
 
 ## Options
 ---
 **loadingComponent:**
-- type: JSX 
-- default: spinner
+- Usage: Replace the different spinner loading component with a different component.
+- Type: JSX or String
+- Default: Spinner
+- String options: threeDots  
 
 **color:**
-- type: String
-- default: blue
+- Usage: Changes the color of the loading component (wont work when using your own custom component).
+- Type: String
+- Default: blue
 
 **backgroundColor:**
-- type: String
-- default: transparent
-- options: blue, pink, yellow, orange, red, black
+- Usage: Changes the color of the loading component (wont work when using your own custom component).
+- Type: String
+- Default: transparent
+- Options: blue, pink, yellow, orange, red, black
  (all linear gradient)
 
 **size:**
-- type: Number
-- default: 120px
+- Usage: Changes the size of the loading component (wont work when using your own custom component).
+- Type: Number
+- Default: 120px
 
 **speed:**
-- type: String
-- options: slow, fast, extreme
+- Usage: Changes the speed of the spinner loading component (works only with default the spinner).
+- Type: String
+- Options: slow, fast, extreme
+
+**fullPage**
+- Usage: Makes the loader component full page (wont work when using your own custom component).
+- Type: Bool
 
 ## License
 

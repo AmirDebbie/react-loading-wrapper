@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import styles from './styles.module.css'
+import PropTypes from 'prop-types'
 
 export function Loading({
   loadingComponent,
@@ -62,6 +63,35 @@ export function Loading({
             animationDuration: animationSpeed ? animationSpeed : '2s'
           }}
         ></div>
+      </div>
+    )
+  } else if (loadingComponent === 'threeDots') {
+    loadingComponent = (
+      <div
+        className={styles.threeDots}
+        style={{
+          position: fullPage ? 'absolute' : '',
+          top: fullPage ? '0' : '',
+          left: fullPage ? '0' : '',
+          width: fullPage ? '100vw' : '100%',
+          height: fullPage ? '100vh' : '100%'
+        }}
+      >
+        <span
+          style={{
+            backgroundColor: color ? color : '#111'
+          }}
+        ></span>
+        <span
+          style={{
+            backgroundColor: color ? color : '#111'
+          }}
+        ></span>
+        <span
+          style={{
+            backgroundColor: color ? color : '#111'
+          }}
+        ></span>
       </div>
     )
   }
