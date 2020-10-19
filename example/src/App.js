@@ -7,9 +7,25 @@ const App = () => {
   const [loading, setLoading] = useState(true)
 
   return (
-    <Loading loading={loading}>
-      <h1>Hello World</h1>
-    </Loading>
+    <div
+      style={{
+        height: 200,
+        width: 200,
+        border: 'solid black 3px',
+        margin: 300
+      }}
+    >
+      <Loading
+        backgroundColor='blue'
+        fullPage
+        speed='extreme'
+        color='red'
+        loadingComponent='threeDots'
+        loading={true}
+      >
+        <h1>Hello World</h1>
+      </Loading>
+    </div>
   )
 }
 
