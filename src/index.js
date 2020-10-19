@@ -12,14 +12,22 @@ export function Loading({
   backgroundColor,
   children
 }) {
+  const [component, setComponent] = useState(loadingComponent)
   const [animationSpeed, setAnimationSpeed] = useState('')
   const [backgroundImage, setBackgroundImage] = useState('')
   const circularMotion = useRef()
 
   useEffect(() => {
-    if (speed === 'slow') setAnimationSpeed('3s')
-    else if (speed === 'fast') setAnimationSpeed('1s')
-    else if (speed === 'extreme') setAnimationSpeed('0.5s')
+    console.log(component)
+    if (component === 'threeDots') {
+      if (speed === 'slow') setAnimationSpeed('1s')
+      else if (speed === 'fast') setAnimationSpeed('0.4s')
+      else if (speed === 'extreme') setAnimationSpeed('0.2s')
+    } else {
+      if (speed === 'slow') setAnimationSpeed('3s')
+      else if (speed === 'fast') setAnimationSpeed('1s')
+      else if (speed === 'extreme') setAnimationSpeed('0.5s')
+    }
 
     if (backgroundColor === 'black') {
       setBackgroundImage(
@@ -70,6 +78,7 @@ export function Loading({
       <div
         className={styles.threeDots}
         style={{
+          backgroundImage: backgroundImage ? backgroundImage : 'transparent',
           position: fullPage ? 'absolute' : '',
           top: fullPage ? '0' : '',
           left: fullPage ? '0' : '',
@@ -79,17 +88,20 @@ export function Loading({
       >
         <span
           style={{
-            backgroundColor: color ? color : '#111'
+            backgroundColor: color ? color : '#111',
+            animationDuration: animationSpeed ? animationSpeed : '0.6s'
           }}
         ></span>
         <span
           style={{
-            backgroundColor: color ? color : '#111'
+            backgroundColor: color ? color : '#111',
+            animationDuration: animationSpeed ? animationSpeed : '0.6s'
           }}
         ></span>
         <span
           style={{
-            backgroundColor: color ? color : '#111'
+            backgroundColor: color ? color : '#111',
+            animationDuration: animationSpeed ? animationSpeed : '0.6s'
           }}
         ></span>
       </div>

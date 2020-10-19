@@ -68,12 +68,12 @@ export default App
  (all linear gradient)
 
 **size:**
-- Usage: Changes the size of the loading component (wont work when using your own custom component).
+- Usage: Changes the size of the loading component (works only on default spinner).
 - Type: Number
 - Default: 120px
 
 **speed:**
-- Usage: Changes the speed of the spinner loading component (works only with default the spinner).
+- Usage: Changes the speed of the animation (wont work when using your own custom component).
 - Type: String
 - Options: slow, fast, extreme
 

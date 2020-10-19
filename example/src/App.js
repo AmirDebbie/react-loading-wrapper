@@ -15,7 +15,14 @@ const App = () => {
         margin: 300
       }}
     >
-      <Loading color='red' loadingComponent='threeDots' loading={true}>
+      <Loading
+        backgroundColor='blue'
+        fullPage
+        speed='extreme'
+        color='red'
+        loadingComponent='threeDots'
+        loading={true}
+      >
         <h1>Hello World</h1>
       </Loading>
     </div>
