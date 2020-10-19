@@ -31,7 +31,9 @@ const App = () => {
       fullPage
       size={100}
       speed='fast'
-      loadingComponent={<MyLoadingComponent />} // Use your own component for the loading screen is you want
+      // Use your own component, or the 'threeDots' component for the loading screen (default is spinner).
+      loadingComponent={<YourLoadingComponent />} 
+      loadingComponent='threeDots' 
     >
       <h1>Hello World</h1>
     </Loading>
