@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
 import styles from './styles.module.css'
-import PropTypes from 'prop-types'
 
 export function Loading({
   loadingComponent,
@@ -18,7 +17,6 @@ export function Loading({
   const circularMotion = useRef()
 
   useEffect(() => {
-    console.log(component)
     if (component === 'threeDots') {
       if (speed === 'slow') setAnimationSpeed('1s')
       else if (speed === 'fast') setAnimationSpeed('0.4s')

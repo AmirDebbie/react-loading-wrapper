@@ -9,20 +9,14 @@ const App = () => {
   return (
     <div
       style={{
+        zIndex: 2000,
         height: 200,
         width: 200,
         border: 'solid black 3px',
         margin: 300
       }}
     >
-      <Loading
-        backgroundColor='blue'
-        fullPage
-        speed='extreme'
-        color='red'
-        loadingComponent='threeDots'
-        loading={true}
-      >
+      <Loading loading={true}>
         <h1>Hello World</h1>
       </Loading>
     </div>
